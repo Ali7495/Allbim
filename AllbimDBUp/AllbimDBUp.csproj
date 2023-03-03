@@ -1,0 +1,143 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="LogScripts\2021_02_11_15_50_create_albim_log_table.sql" />
+    <None Remove="LogScripts\2021_02_11_23_06_add_method_to_system_error_log_table.sql" />
+    <None Remove="Scripts\2021_01_11_11_23_create_albimdb_table.sql" />
+    <None Remove="Scripts\2021_02_11_10_40_insert_initial_data.sql" />
+    <None Remove="Scripts\2021_05_11_21_19_update_policy_request_commit_table.sql" />
+    <None Remove="Scripts\2021_11_06_18_33_insurerTermDetail_data.sql" />
+    <None Remove="Scripts\2021_11_11_17_33_add_insurerTermDetail_data.sql" />
+    <None Remove="Scripts\2021_11_13_19_30_add_vehicleBrand_data.sql" />
+    <None Remove="Scripts\2021_11_14_18_30_add_insuranceCentralRule_data.sql" />
+    <None Remove="Scripts\2021_11_14_21_30_update_Tables_data.sql" />
+    <None Remove="Scripts\2021_11_15_11_00_add_insuranceStep_data.sql" />
+    <None Remove="Scripts\2021_11_15_19_55_add_insurerTermAndInsuranceStep_data.sql" />
+    <None Remove="Scripts\2021_11_15_20_47_Enumeration_AgentSelectionType_data.sql" />
+    <None Remove="Scripts\2021_11_15_22_33_change_policy_request_agent_selection.sql" />
+    <None Remove="Scripts\2021_11_15_22_42_add_insurer_term_detail_fk.sql" />
+    <None Remove="Scripts\2021_11_22_22_42_create_contact_ud_table.sql" />
+    <None Remove="Scripts\2021_11_23_10_42_add_tracking_number_to_contact_us_table.sql" />
+    <None Remove="Scripts\2021_11_24_20_00_add_insurerTerm_data.sql" />
+    <None Remove="Scripts\2021_11_24_20_01_add_insurerTermDetail_data.sql" />
+    <None Remove="Scripts\2021_12_02_2_23_25_Create_Permissions.sql" />
+    <None Remove="Scripts\2021_12_06_14_30_delete_insuranceField_data.sql" />
+    <None Remove="Scripts\2021_12_06_15_30_insert_insuranceField_data.sql" />
+    <None Remove="Scripts\2021_12_06_16_30_add_insuranceTermType_tablea.sql" />
+    <None Remove="Scripts\2021_12_06_17_00_insert_insuranceTermType_data.sql" />
+    <None Remove="Scripts\2021_12_06_23_00_insert_relatedResourceEnums_data.sql" />
+    <None Remove="Scripts\2021_12_06_23_20_insert_pricingTypeEnums_data.sql" />
+    <None Remove="Scripts\2021_12_06_23_30_insert_calculationTypeEnums_data.sql" />
+    <None Remove="Scripts\2021_12_06_23_45_insert_conditionTypeEnums_data.sql" />
+    <None Remove="Scripts\2021_12_07_11_30_update_pricingTypeEnum_data.sql" />
+    <None Remove="Scripts\2021_12_07_12_00_add_enumeration_data.sql" />
+    <None Remove="Scripts\2021_12_07_13_05_update_regulation_article_page.sql" />
+    <None Remove="Scripts\2021_12_07_13_05_update_title_regulation_article_page.sql" />
+    <None Remove="Scripts\2021_12_07_17_40_add_insuraneTypeAndUpdate_data.sql" />
+    <None Remove="Scripts\2021_12_07_17_50_update_insurerTerm_and_insurerTermDetail_table.sql" />
+    <None Remove="Scripts\2021_12_07_21_27_change_insurer_term_table.sql" />
+    <None Remove="Scripts\2021_12_07_23_30_delete_and_insert_term_data.sql" />
+    <None Remove="Scripts\2021_12_11_15_36_add_fk_issue_session_id.sql" />
+    <None Remove="Scripts\2021_12_13_18_30_update_insurerTermType_data.sql" />
+    <None Remove="Scripts\2021_12_13_21_40_create_insurance_front_tab_tablesql.sql" />
+    <None Remove="Scripts\2021_12_13_23_01_insert_insurance_front_tab_tablesql.sql" />
+    <None Remove="Scripts\2021_12_14_19_47_delete_insurers_and_insurerTerms_data.sql" />
+    <None Remove="Scripts\2021_12_14_23_01_update_vehicle_data.sql" />
+    <None Remove="Scripts\2021_12_15_00_52_update_vehicle_data_just_old_record.sql" />
+    <None Remove="Scripts\2021_12_16_11_35_update_info_address.sql" />
+    <None Remove="Scripts\2021_12_23_11_00_add_caption_to_role.sql" />
+    <None Remove="Scripts\2021_12_23_11_10_fill_role_caption.sql" />
+    <None Remove="Scripts\2021_12_24_12_00_add_field_to_role_menu_table.sql" />
+    <None Remove="Scripts\2021_12_24_19_00_insert_permission_with_insert_id.sql" />
+    <None Remove="Scripts\2021_12_24_20_54_insert_menu_role_permission.sql" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="LogScripts\2021_02_11_15_50_create_albim_log_table.sql" />
+    <EmbeddedResource Include="LogScripts\2021_02_11_23_06_add_method_to_system_error_log_table.sql" />
+    <EmbeddedResource Include="Scripts\2021_01_11_11_23_create_albimdb_table.sql" />
+    <EmbeddedResource Include="Scripts\2021_02_11_10_40_insert_initial_data.sql" />
+    <EmbeddedResource Include="Scripts\2021_05_11_21_19_update_policy_request_commit_table.sql" />
+    <EmbeddedResource Include="Scripts\2021_11_06_18_33_insurerTermDetail_data.sql" />
+    <EmbeddedResource Include="Scripts\2021_11_11_17_33_add_insurerTermDetail_data.sql" />
+    <EmbeddedResource Include="Scripts\2021_11_13_19_30_add_vehicleBrand_data.sql" />
+    <EmbeddedResource Include="Scripts\2021_11_14_18_30_add_insuranceCentralRule_data.sql" />
+    <EmbeddedResource Include="Scripts\2021_11_14_21_30_update_Tables_data.sql" />
+    <EmbeddedResource Include="Scripts\2021_11_15_11_00_add_insuranceStep_data.sql" />
+    <EmbeddedResource Include="Scripts\2021_11_15_19_55_add_insurerTermAndInsuranceStep_data.sql" />
+    <EmbeddedResource Include="Scripts\2021_11_15_20_47_Enumeration_AgentSelectionType_data.sql" />
+    <EmbeddedResource Include="Scripts\2021_11_15_22_33_change_policy_request_agent_selection.sql" />
+    <EmbeddedResource Include="Scripts\2021_11_15_22_42_add_insurer_term_detail_fk.sql" />
+    <EmbeddedResource Include="Scripts\2021_11_22_22_42_create_contact_ud_table.sql" />
+    <EmbeddedResource Include="Scripts\2021_11_23_10_42_add_tracking_number_to_contact_us_table.sql" />
+    <EmbeddedResource Include="Scripts\2021_11_24_20_00_add_insurerTerm_data.sql" />
+    <EmbeddedResource Include="Scripts\2021_11_24_20_01_add_insurerTermDetail_data.sql" />
+    <EmbeddedResource Include="Scripts\2021_12_02_2_23_25_Create_Permissions.sql" />
+    <EmbeddedResource Include="Scripts\2021_12_06_14_30_delete_insuranceField_data.sql" />
+    <EmbeddedResource Include="Scripts\2021_12_06_15_30_insert_insuranceField_data.sql" />
+    <EmbeddedResource Include="Scripts\2021_12_06_16_30_add_insuranceTermType_tablea.sql" />
+    <EmbeddedResource Include="Scripts\2021_12_06_17_00_insert_insuranceTermType_data.sql" />
+    <EmbeddedResource Include="Scripts\2021_12_06_23_00_insert_relatedResourceEnums_data.sql" />
+    <EmbeddedResource Include="Scripts\2021_12_06_23_20_insert_pricingTypeEnums_data.sql" />
+    <EmbeddedResource Include="Scripts\2021_12_06_23_30_insert_calculationTypeEnums_data.sql" />
+    <EmbeddedResource Include="Scripts\2021_12_06_23_45_insert_conditionTypeEnums_data.sql" />
+    <EmbeddedResource Include="Scripts\2021_12_07_11_30_update_pricingTypeEnum_data.sql" />
+    <EmbeddedResource Include="Scripts\2021_12_07_12_00_add_enumeration_data.sql" />
+    <EmbeddedResource Include="Scripts\2021_12_07_13_05_update_regulation_article_page.sql" />
+    <EmbeddedResource Include="Scripts\2021_12_07_13_05_update_title_regulation_article_page.sql" />
+    <EmbeddedResource Include="Scripts\2021_12_07_17_40_add_insuraneTypeAndUpdate_data.sql" />
+    <EmbeddedResource Include="Scripts\2021_12_07_17_50_update_insurerTerm_and_insurerTermDetail_table.sql" />
+    <EmbeddedResource Include="Scripts\2021_12_07_21_27_change_insurer_term_table.sql" />
+    <EmbeddedResource Include="Scripts\2021_12_07_23_30_delete_and_insert_term_data.sql" />
+    <EmbeddedResource Include="Scripts\2021_12_11_15_36_add_fk_issue_session_id.sql" />
+    <EmbeddedResource Include="Scripts\2021_12_13_18_30_update_insurerTermType_data.sql" />
+    <EmbeddedResource Include="Scripts\2021_12_13_21_40_create_insurance_front_tab_tablesql.sql" />
+    <EmbeddedResource Include="Scripts\2021_12_13_23_01_insert_insurance_front_tab_tablesql.sql" />
+    <EmbeddedResource Include="Scripts\2021_12_14_19_47_delete_insurers_and_insurerTerms_data.sql" />
+    <EmbeddedResource Include="Scripts\2021_12_14_23_01_update_vehicle_data.sql" />
+    <EmbeddedResource Include="Scripts\2021_12_15_00_52_update_vehicle_data_just_old_record.sql" />
+    <EmbeddedResource Include="Scripts\2021_12_16_11_35_update_info_address.sql" />
+    <EmbeddedResource Include="Scripts\2021_12_23_11_00_add_caption_to_role.sql" />
+    <EmbeddedResource Include="Scripts\2021_12_23_11_10_fill_role_caption.sql" />
+    <EmbeddedResource Include="Scripts\2021_12_24_12_00_add_field_to_role_menu_table.sql" />
+    <EmbeddedResource Include="Scripts\2021_12_24_19_00_insert_permission_with_insert_id.sql" />
+    <EmbeddedResource Include="Scripts\2021_12_24_20_54_insert_menu_role_permission.sql" />
+    <EmbeddedResource Include="Scripts\2021_12_26_13_58_update_role_table.sql" />
+    <EmbeddedResource Include="Scripts\2021_12_26_16_23_add_menu_permission_for_admin.sql" />
+    <EmbeddedResource Include="Scripts\2021_12_26_14_14_add_user_role_admin.sql" />
+    <EmbeddedResource Include="Scripts\2021_12_27_21_00_add_central_rule_type_table.sql" />
+    <EmbeddedResource Include="Scripts\2021_12_28_19_25_add_is_deleted_in_company_agent_table.sql" />
+    <EmbeddedResource Include="Scripts\2021_12_27_22_00_insert_data_central_rule_type_table.sql" />
+    <EmbeddedResource Include="Scripts\2021_12_29_18_50_update_central_rule_table.sql" />
+    <EmbeddedResource Include="Scripts\2022_01_01_insert_phone_info_table.sql" />
+    <EmbeddedResource Include="Scripts\2022_01_03_00_00_update_about_central_rule_insurer_term.sql" />
+    <EmbeddedResource Include="Scripts\2022_01_03_13_00_update_calculation_type_id_insurerTerm.sql" />
+    <EmbeddedResource Include="Scripts\2022_01_04_21_56_update_central_rule_value_and_discount.sql" />
+    <EmbeddedResource Include="Scripts\2022_01_06_16_07_update_central_rule_insurer_term_table.sql" />
+    <EmbeddedResource Include="Scripts\2022_01_06_17_22_update_menu_role_permission.sql" />
+    <EmbeddedResource Include="Scripts\2022_01_06_19_56_add_parent_id_to_person_company_table.sql" />
+    <EmbeddedResource Include="Scripts\2022_01_16_19_16_add_resource_article_type_table.sql" />
+    <EmbeddedResource Include="Scripts\2022_01_16_19_19_add_article_type_data_add_foreginkey.sql" />
+    <EmbeddedResource Include="Scripts\2022_01_16_19_34_update_article_type_add_resource_operation_table.sql" />
+    <EmbeddedResource Include="Scripts\2022_01_16_20_01_add_permission_and_resource_operation.sql" />
+    <EmbeddedResource Include="Scripts\2022_01_22_16_16_add_payment_status_table.sql" />
+    <EmbeddedResource Include="Scripts\2022_01_22_18_21_add_payment_gateway_details_table.sql" />
+    <EmbeddedResource Include="Scripts\2022_01_22_18_33_add_name_to_payment_gateway_table.sql" />
+    <EmbeddedResource Include="Scripts\2022_01_24_add_company_agent_person_policy_request_factor_details_table.sql" />
+    <EmbeddedResource Include="Scripts\2022_01_24_add_payment_payment_gateway_relation_table.sql" />
+    <EmbeddedResource Include="Scripts\2022_01_25_add_payment_status.sql" />
+    <EmbeddedResource Include="Scripts\2022_01_26_alter_payment_gateway_nullable.sql" />
+    <EmbeddedResource Include="Scripts\2022_01_27_14_37_add_permission_to_roles.sql" />
+
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="DbUp" Version="4.5.0" />
+  </ItemGroup>
+  
+</Project>

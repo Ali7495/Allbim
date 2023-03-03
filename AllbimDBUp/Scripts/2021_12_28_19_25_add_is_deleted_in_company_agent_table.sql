@@ -1,0 +1,5 @@
+
+BEGIN TRANSACTION;
+ALTER TABLE CompanyAgent
+  add IsDeleted bit NOT NULL DEFAULT (0);
+    COMMIT;

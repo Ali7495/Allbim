@@ -1,0 +1,52 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+
+    <IsPackable>false</IsPackable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Article\**" />
+    <Compile Remove="Methodes\**" />
+    <Compile Remove="Models\**" />
+    <Compile Remove="SuccessTests\**" />
+    <EmbeddedResource Remove="Article\**" />
+    <EmbeddedResource Remove="Methodes\**" />
+    <EmbeddedResource Remove="Models\**" />
+    <EmbeddedResource Remove="SuccessTests\**" />
+    <None Remove="Article\**" />
+    <None Remove="Methodes\**" />
+    <None Remove="Models\**" />
+    <None Remove="SuccessTests\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="PlaceServiceFake.cs" />
+    <Compile Remove="PlaceTest.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Bogus" Version="33.1.1" />
+    <PackageReference Include="DocumentFormat.OpenXml" Version="2.13.1" />
+    <PackageReference Include="FakeItEasy" Version="7.2.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Testing" Version="5.0.11" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.9.4" />
+    <PackageReference Include="Moq" Version="4.16.1" />
+    <PackageReference Include="MSTest.TestFramework" Version="2.2.7" />
+    <PackageReference Include="xunit" Version="2.4.1" />
+    <PackageReference Include="xunit.runner.visualstudio" Version="2.4.3">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="coverlet.collector" Version="3.0.2">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\albim\Albim.csproj" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,14 @@
+﻿CREATE TABLE [dbo].[InsuranceFrontTab](
+    [Id] bigint IDENTITY(1,1) NOT NULL,
+    [InsuranceId] bigint NOT NULL,
+    [Name] VARCHAR(100) NULL,
+    [Title] VARCHAR(100) NULL,
+    [IsDeleted] BIT NOT NULL DEFAULT (0),
+    CONSTRAINT [PK_InsuranceFrontTab] PRIMARY KEY CLUSTERED
+(
+[Id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+    ) ON [PRIMARY]
+
+ALTER TABLE [dbo].[InsuranceFrontTab]  WITH CHECK ADD  CONSTRAINT [FK_InsuranceFrontTab_Insurance] FOREIGN KEY([InsuranceId])
+    REFERENCES [dbo].[Insurance] ([Id])

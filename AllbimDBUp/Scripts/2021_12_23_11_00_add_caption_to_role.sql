@@ -1,0 +1,2 @@
+ALTER TABLE Role
+    ADD Caption NVARCHAR(100) ;
