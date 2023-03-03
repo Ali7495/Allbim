@@ -1,0 +1,6 @@
+
+BEGIN TRANSACTION;
+ALTER TABLE dbo.Payment
+    ALTER COLUMN PaymentGatewayId BIGINT NULL;
+
+COMMIT;

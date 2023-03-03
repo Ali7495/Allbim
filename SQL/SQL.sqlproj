@@ -1,0 +1,150 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <Name>SQL</Name>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectVersion>4.1</ProjectVersion>
+    <ProjectGuid>{c6d236be-8977-4d8b-ba66-ba1ededf7d24}</ProjectGuid>
+    <DSP>Microsoft.Data.Tools.Schema.Sql.Sql130DatabaseSchemaProvider</DSP>
+    <OutputType>Database</OutputType>
+    <RootPath>
+    </RootPath>
+    <RootNamespace>SQL</RootNamespace>
+    <AssemblyName>SQL</AssemblyName>
+    <ModelCollation>1025,CI</ModelCollation>
+    <DefaultFileStructure>BySchemaAndSchemaType</DefaultFileStructure>
+    <DeployToDatabase>True</DeployToDatabase>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetLanguage>CS</TargetLanguage>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <SqlServerVerification>False</SqlServerVerification>
+    <IncludeCompositeObjects>True</IncludeCompositeObjects>
+    <TargetDatabaseSet>True</TargetDatabaseSet>
+    <DefaultCollation>Arabic_CI_AS</DefaultCollation>
+    <DefaultFilegroup>PRIMARY</DefaultFilegroup>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">11.0</VisualStudioVersion>
+    <!-- Default to the v11.0 targets path if the targets file for the current VS version is not found -->
+    <SSDTExists Condition="Exists('$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets')">True</SSDTExists>
+    <VisualStudioVersion Condition="'$(SSDTExists)' == ''">11.0</VisualStudioVersion>
+  </PropertyGroup>
+  <Import Condition="'$(SQLDBExtensionsRefPath)' != ''" Project="$(SQLDBExtensionsRefPath)\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <Import Condition="'$(SQLDBExtensionsRefPath)' == ''" Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <ItemGroup>
+    <Folder Include="Properties" />
+    <Folder Include="dbo\" />
+    <Folder Include="dbo\Tables\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Build Include="dbo\Tables\Person.sql" />
+    <Build Include="dbo\Tables\User.sql" />
+    <Build Include="dbo\Tables\PolicyRequest.sql" />
+    <Build Include="dbo\Tables\Company.sql" />
+    <Build Include="dbo\Tables\Province.sql" />
+    <Build Include="dbo\Tables\PolicyRequestDetails.sql" />
+    <Build Include="dbo\Tables\TownShip.sql" />
+    <Build Include="dbo\Tables\PolicyRequestHolder.sql" />
+    <Build Include="dbo\Tables\City.sql" />
+    <Build Include="dbo\Tables\Address.sql" />
+    <Build Include="dbo\Tables\Place.sql" />
+    <Build Include="dbo\Tables\InsuredRequest.sql" />
+    <Build Include="dbo\Tables\Vehicle.sql" />
+    <Build Include="dbo\Tables\InsuredRequestPerson.sql" />
+    <Build Include="dbo\Tables\PersonAddress.sql" />
+    <Build Include="dbo\Tables\InsuredRequestCompany.sql" />
+    <Build Include="dbo\Tables\CompanyAddress.sql" />
+    <Build Include="dbo\Tables\InsuredRequestVehicle.sql" />
+    <Build Include="dbo\Tables\PlaceAddress.sql" />
+    <Build Include="dbo\Tables\InsuredRequestRelatedPerson.sql" />
+    <Build Include="dbo\Tables\Insurance.sql" />
+    <Build Include="dbo\Tables\InsuredRequestPlace.sql" />
+    <Build Include="dbo\Tables\Insurer.sql" />
+    <Build Include="dbo\Tables\Role.sql" />
+    <Build Include="dbo\Tables\UserRole.sql" />
+    <Build Include="dbo\Tables\InsurerTerm.sql" />
+    <Build Include="dbo\Tables\VehicleType.sql" />
+    <Build Include="dbo\Tables\VehicleRuleCategory.sql" />
+    <Build Include="dbo\Tables\VehicleBrand.sql" />
+    <Build Include="dbo\Tables\VehicleApplication.sql" />
+    <Build Include="dbo\Tables\sysdiagrams.sql" />
+    <Build Include="dbo\Tables\SchemaVersions.sql" />
+    <Build Include="dbo\Tables\RolePermission.sql" />
+    <Build Include="dbo\Tables\ResourceOperation.sql" />
+    <Build Include="dbo\Tables\Resource.sql" />
+    <Build Include="dbo\Tables\ReminderPeriod.sql" />
+    <Build Include="dbo\Tables\Reminder.sql" />
+    <Build Include="dbo\Tables\RegisterTemp.sql" />
+    <Build Include="dbo\Tables\PolicyRequestStatus.sql" />
+    <Build Include="dbo\Tables\PolicyRequestIssue.sql" />
+    <Build Include="dbo\Tables\PolicyRequestInspection.sql" />
+    <Build Include="dbo\Tables\PolicyRequestFactorDetails.sql" />
+    <Build Include="dbo\Tables\PolicyRequestFactor.sql" />
+    <Build Include="dbo\Tables\PolicyRequestCommentAttachment.sql" />
+    <Build Include="dbo\Tables\PolicyRequestComment.sql" />
+    <Build Include="dbo\Tables\PolicyRequestAttachment.sql" />
+    <Build Include="dbo\Tables\PersonCompany.sql" />
+    <Build Include="dbo\Tables\PersonAttachment.sql" />
+    <Build Include="dbo\Tables\Permission.sql" />
+    <Build Include="dbo\Tables\PaymentStatus.sql" />
+    <Build Include="dbo\Tables\PaymentGatewayDetails.sql" />
+    <Build Include="dbo\Tables\PaymentGateway.sql" />
+    <Build Include="dbo\Tables\Payment.sql" />
+    <Build Include="dbo\Tables\OnlinePayment.sql" />
+    <Build Include="dbo\Tables\Menu.sql" />
+    <Build Include="dbo\Tables\IssueSession.sql" />
+    <Build Include="dbo\Tables\InsurerTermDetail.sql" />
+    <Build Include="dbo\Tables\InsuredRequestVehicleDetails.sql" />
+    <Build Include="dbo\Tables\InsuranceTermType.sql" />
+    <Build Include="dbo\Tables\InsuranceStep.sql" />
+    <Build Include="dbo\Tables\InsuranceFrontTab.sql" />
+    <Build Include="dbo\Tables\InsuranceField.sql" />
+    <Build Include="dbo\Tables\InsuranceFAQ.sql" />
+    <Build Include="dbo\Tables\InsuranceCentralRule.sql" />
+    <Build Include="dbo\Tables\InspectionSession.sql" />
+    <Build Include="dbo\Tables\Info.sql" />
+    <Build Include="dbo\Tables\FAQ.sql" />
+    <Build Include="dbo\Tables\Enumeration.sql" />
+    <Build Include="dbo\Tables\Discount.sql" />
+    <Build Include="dbo\Tables\ContactUs.sql" />
+    <Build Include="dbo\Tables\CompanyCenterSchedule.sql" />
+    <Build Include="dbo\Tables\CompanyCenter.sql" />
+    <Build Include="dbo\Tables\CompanyAgentPerson.sql" />
+    <Build Include="dbo\Tables\CompanyAgent.sql" />
+    <Build Include="dbo\Tables\Comment.sql" />
+    <Build Include="dbo\Tables\CentralRuleType.sql" />
+    <Build Include="dbo\Tables\Centers.sql" />
+    <Build Include="dbo\Tables\Category.sql" />
+    <Build Include="dbo\Tables\Attachment.sql" />
+    <Build Include="dbo\Tables\ArticleType.sql" />
+    <Build Include="dbo\Tables\ArticleSection.sql" />
+    <Build Include="dbo\Tables\ArticleMetaKey.sql" />
+    <Build Include="dbo\Tables\ArticleCategory.sql" />
+    <Build Include="dbo\Tables\Article.sql" />
+  </ItemGroup>
+</Project>
