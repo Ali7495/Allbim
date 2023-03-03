@@ -1,0 +1,97 @@
+workflow:
+  rules:
+    - if: $CI_COMMIT_DESCRIPTION =~ /-noci/
+      when: never
+    - when: always
+
+variables:
+  API_PROJ_PATH: '.\albim'
+  API_PROJ: 'albim.csproj'
+  API_TEST_PROJ_PATH: '.\AlbimTest'
+  API_TEST_PROJ: 'AlbimTest.csproj'
+  PUBLISHED_PATH: '.\bin\Release\published'
+  PUBLISH_EXCLUDED_FILES_PATH: '.\albim\publish_excluded_files.txt'
+  DEPLOY_PATH_TEST: '\\192.168.5.22\testapi'
+  DEPLOY_PATH_PRODUCTION: '\\192.168.5.22\api'
+  APP_OFFLINE_CONTENT: '<!DOCTYPE html><html><head>  <meta charset="UTF-8">  <title>Offline</title></head><body style="margin:3em;font-family:sans-serif">  <h2>hold on!</h2>  <p>server got some new stuff. while Its upgrading, you can think about terrible things that you have done...</p></body></html>'
+  GIT_SUBMODULE_STRATEGY: recursive
+  
+  SCRIPT_PATH: 'c:\inetpub\wwwroot\notify_on_deploy\rochekChat.py'
+  CONFIG_PATH: 'c:\inetpub\wwwroot\notify_on_deploy\aloni_develop_config.json'
+  NOTIFICATION_DEPLOY_DEV_START: |-
+    "Publish Started...
+    WEB API : albim api @TEST"
+  NOTIFICATION_DEPLOY_START: |-
+    "@all
+    Publish Started...
+    WEB API : albim api @PRODUCTION"
+  NOTIFICATION_DEPLOY_END: |-
+    "Publish Ended.
+    WEB API : albim api @PRODUCTION
+    Documentetion : https://allbim.org/api/swagger/index.html
+    Change Log :
+    $CI_COMMIT_MESSAGE
+    Author :
+    $GITLAB_USER_NAME <$GITLAB_USER_EMAIL>"
+  NOTIFICATION_DEPLOY_DEV_END: |-
+    "Publish Ended.
+    WEB API : albim api @TEST
+    Documentetion : https://test.allbim.org/api/swagger/index.html
+    Change Log :
+    $CI_COMMIT_MESSAGE
+    Author :
+    $GITLAB_USER_NAME <$GITLAB_USER_EMAIL>"
+
+stages:
+  - buildAndTest
+  - deploy
+      
+build_and_test_job:
+  stage: buildAndTest
+  tags:
+    - Production
+  only:
+    - branches
+  #before_script:
+    #- 'git submodule update --init --recursive'
+  script:
+    - 'dotnet build $API_TEST_PROJ_PATH\$API_TEST_PROJ -p:Configuration=Release'
+    - 'dotnet test $API_TEST_PROJ_PATH\$API_TEST_PROJ -p:Configuration=Release'
+
+deploy_job_on_test:
+  stage: deploy
+  tags:
+    - Production
+  only:
+    - branches
+  script:
+    - "chcp 65001"
+    - "python $SCRIPT_PATH -c $CONFIG_PATH -m $NOTIFICATION_DEPLOY_DEV_START"
+    - 'dotnet publish $API_PROJ_PATH\$API_PROJ -p:Configuration=Release -o $PUBLISHED_PATH'
+    #- 'New-Item -path $DEPLOY_PATH_TEST\app_offline.htm' 
+    - 'Set-Content -path $DEPLOY_PATH_TEST\app_offline.htm $APP_OFFLINE_CONTENT'
+    - 'Start-Sleep -s 35'
+    - 'xcopy /y /s /EXCLUDE:$PUBLISH_EXCLUDED_FILES_PATH $PUBLISHED_PATH\*.* $DEPLOY_PATH_TEST'
+    - 'Remove-Item -Path $DEPLOY_PATH_TEST\app_offline.htm'
+    - "python $SCRIPT_PATH -c $CONFIG_PATH -m $NOTIFICATION_DEPLOY_DEV_END"
+  dependencies:
+    - build_and_test_job
+
+deploy_job_on_production:
+  stage: deploy
+  tags:
+    - Production
+  script:
+    - "chcp 65001"
+    - "python $SCRIPT_PATH -c $CONFIG_PATH -m $NOTIFICATION_DEPLOY_START"
+    # - 'New-Item -path $DEPLOY_PATH_PRODUCTION\app_offline.htm'
+    - 'Set-Content -path $DEPLOY_PATH_PRODUCTION\app_offline.htm $APP_OFFLINE_CONTENT'
+    - 'Start-Sleep -s 35'
+    - 'xcopy /y /s /EXCLUDE:$PUBLISH_EXCLUDED_FILES_PATH $DEPLOY_PATH_TEST\*.* $DEPLOY_PATH_PRODUCTION'
+    - 'Remove-Item -Path $DEPLOY_PATH_PRODUCTION\app_offline.htm'
+    - "python $SCRIPT_PATH -c $CONFIG_PATH -m $NOTIFICATION_DEPLOY_END"
+  rules:
+    - if: '$CI_COMMIT_BRANCH == "master"'
+      when: on_success
+  dependencies:
+    - build_and_test_job

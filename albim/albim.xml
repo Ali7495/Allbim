@@ -1,0 +1,462 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Albim</name>
+    </assembly>
+    <members>
+        <member name="T:Albim.Controllers.v1.PolicyController">
+            <summary>
+            * Not Used Yet
+            </summary>
+        </member>
+        <member name="T:albim.Controllers.BaseController">
+            <summary>
+            Base Controller 
+            </summary>
+        </member>
+        <member name="M:albim.Controllers.BaseController.GetInnerException(System.Exception)">
+            <summary>
+            Get Inner Exception
+            </summary>
+            <param name="ex"></param>
+            <returns></returns>
+        </member>
+        <member name="T:albim.Controllers.v1.AttachmentController">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:albim.Controllers.v1.AttachmentController.#ctor(Microsoft.Extensions.Configuration.IConfiguration,Services.IAttachmentService,Services.IAttachmentService)">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:albim.Controllers.v1.CenterController">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:albim.Controllers.v1.CompanyController">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:albim.Controllers.v1.CompanyController.#ctor(Services.ICompanyService,Services.IInsuranceService,Services.IInsurerTermService,Services.Agent.IAgentService,Services.CompanyCenter.ICompanyCenterServices,Services.InsurerServices.IInsurerServices,Services.InsurerTermDetailServices.IInsurerTermDetailServices)">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:albim.Controllers.v1.CompanyController.Create(Models.Company.CompanyInputViewModel,System.Threading.CancellationToken)">
+            <summary>
+            To Create a User
+            </summary>c
+            <param name="companyViewModel"></param>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+        </member>
+        <member name="T:albim.Controllers.v1.InsuranceController">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:albim.Controllers.v1.InsuranceController.#ctor(Services.IInsuranceService,Services.IInsuranceCenteralRuleService,Services.IInsuranceFAQServices)">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:albim.Controllers.v1.InsuredRequestController">
+            <summary>
+            * Not Used Yet
+            </summary>
+        </member>
+        <member name="M:albim.Controllers.v1.InsuredRequestController.CreateInsuredRequestCompany(Models.InsuranceRequest.InsuranceRequestCompanyViewModel,System.Threading.CancellationToken)">
+            <summary>
+            To Create a User
+            </summary>
+            <param name="insuredRequestCompanyViewModel"></param>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+        </member>
+        <member name="M:albim.Controllers.v1.InsuredRequestController.CreatePolicyRequestPerson(Models.InsuranceRequest.InsuranceRequestPersonViewModel,System.Threading.CancellationToken)">
+            <summary>
+            To Create a User
+            </summary>
+            <param name="insuredRequestViewModel"></param>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+        </member>
+        <member name="M:albim.Controllers.v1.InsuredRequestController.CreatePolicyRequestPlace(Models.InsuranceRequest.InsuranceRequestPlaceViewModel,System.Threading.CancellationToken)">
+            <summary>
+            To Create a User
+            </summary>
+            <param name="insuredRequestPlaceViewModel"></param>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+        </member>
+        <member name="M:albim.Controllers.v1.InsuredRequestController.CreateRelatedPerson(Models.InsuranceRequest.InsuredRequestRelatedPersonViewModel,System.Threading.CancellationToken)">
+            <summary>
+            To Create a User
+            </summary>
+            <param name="insuredRequestViewModel"></param>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+        </member>
+        <member name="T:albim.Controllers.v1.PersonController">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:albim.Controllers.v1.PersonController.#ctor(Microsoft.Extensions.Configuration.IConfiguration,Services.IPersonService,Services.IPersonAddressService,Services.IAttachmentService,Services.SmsService.ISmsService)">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:albim.Controllers.v1.PersonController.Create(Models.Person.PersonViewModel,System.Threading.CancellationToken)">
+            <summary>
+            To Create a User
+            </summary>
+            <param name="personViewModel"></param>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+        </member>
+        <member name="T:albim.Controllers.v1.PlaceController">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:albim.Controllers.v1.PlaceController.#ctor(Microsoft.Extensions.Configuration.IConfiguration,Services.IPlaceService)">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:albim.Controllers.v1.PlaceController.Create(Models.Place.PlaceInputViewModel,System.Threading.CancellationToken)">
+            <summary>
+            To Create a User
+            </summary>c
+            <param name="placeViewModel"></param>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+        </member>
+        <member name="M:albim.Controllers.v1.PlaceController.CreatePlaceAddress(Models.Place.PlaceAddressInputViewModel,System.Threading.CancellationToken)">
+            <summary>
+            To Create a User
+            </summary>c
+            <param name="ViewModel"></param>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+        </member>
+        <member name="T:albim.Controllers.v1.ReminderController">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:albim.Controllers.v1.RoleController">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:albim.Controllers.v1.RoleController.#ctor(Services.IRoleService)">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:albim.Controllers.v1.SsoController">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:albim.Controllers.v1.SsoController.#ctor(Microsoft.Extensions.Configuration.IConfiguration,Services.ISsoService)">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:albim.Controllers.v1.SsoController.Create(Models.Person.RegisterViewModel,System.Threading.CancellationToken)">
+            <summary>
+            To Create a User
+            </summary>
+            <param name="registerViewModel"></param>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+        </member>
+        <member name="M:albim.Controllers.v1.SsoController.Login(Models.Login.LoginViewModel,System.Threading.CancellationToken)">
+            <summary>
+            Login Authentication
+            </summary>
+            <param name="loginViewModel"></param>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+        </member>
+        <member name="T:albim.Controllers.v1.UploadController">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:albim.Controllers.v1.UploadController.#ctor(Microsoft.Extensions.Configuration.IConfiguration,Services.IUploadService)">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:albim.Controllers.v1.UserController">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:albim.Controllers.v1.UserController.#ctor(Services.IUserService,Microsoft.Extensions.Configuration.IConfiguration,Services.ISsoService,Services.SmsService.ISmsService)">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:albim.Controllers.v1.VehicleApplicationController">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:albim.Controllers.v1.VehicleBrandController">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:albim.Controllers.v1.VehicleController">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:albim.Controllers.v1.VehicleTypeController">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:albim.CustomExceptionHandlerMiddlewareExtensions">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:albim.CustomExceptionHandlerMiddlewareExtensions.UseCustomExceptionHandler(Microsoft.AspNetCore.Builder.IApplicationBuilder)">
+            <summary>
+            
+            </summary>
+            <param name="builder"></param>
+            <returns></returns>
+        </member>
+        <member name="T:albim.CustomExceptionHandlerMiddleware">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:albim.CustomExceptionHandlerMiddleware.#ctor(Microsoft.AspNetCore.Http.RequestDelegate,Microsoft.AspNetCore.Hosting.IWebHostEnvironment,Microsoft.Extensions.Logging.ILogger{albim.CustomExceptionHandlerMiddleware},Microsoft.Extensions.Localization.IStringLocalizer{Albim.Resources.Resource})">
+            <summary>
+            
+            </summary>
+            <param name="next"></param>
+            <param name="env"></param>
+            <param name="logger"></param>
+            <param name="localizer"></param>
+        </member>
+        <member name="T:albim.Program">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:albim.Program.Main(System.String[])">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:albim.Program.CreateHostBuilder(System.String[])">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:albim.Result.ApiResult">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:albim.Result.ApiResult.IsSuccess">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:albim.Result.ApiResult.StatusCode">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:albim.Result.ApiResult.Message">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:albim.Result.ApiResult.#ctor(System.Boolean,Common.ApiResultStatusCode,System.Boolean,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="isSuccess"></param>
+            <param name="statusCode"></param>
+            <param name="message"></param>
+            <param name="isCached"></param>
+        </member>
+        <member name="M:albim.Result.ApiResult.op_Implicit(Microsoft.AspNetCore.Mvc.OkResult)~albim.Result.ApiResult">
+            <summary>
+            
+            </summary>
+            <param name="result"></param>
+            <returns></returns>
+        </member>
+        <member name="M:albim.Result.ApiResult.op_Implicit(Microsoft.AspNetCore.Mvc.BadRequestResult)~albim.Result.ApiResult">
+            <summary>
+            
+            </summary>
+            <param name="result"></param>
+            <returns></returns>
+        </member>
+        <member name="M:albim.Result.ApiResult.op_Implicit(Microsoft.AspNetCore.Mvc.BadRequestObjectResult)~albim.Result.ApiResult">
+            <summary>
+            
+            </summary>
+            <param name="result"></param>
+            <returns></returns>
+        </member>
+        <member name="M:albim.Result.ApiResult.op_Implicit(Microsoft.AspNetCore.Mvc.ContentResult)~albim.Result.ApiResult">
+            <summary>
+            
+            </summary>
+            <param name="result"></param>
+            <returns></returns>
+        </member>
+        <member name="M:albim.Result.ApiResult.op_Implicit(Microsoft.AspNetCore.Mvc.NotFoundResult)~albim.Result.ApiResult">
+            <summary>
+            
+            </summary>
+            <param name="result"></param>
+            <returns></returns>
+        </member>
+        <member name="T:albim.Result.ApiResult`1">
+            <summary>
+            
+            </summary>
+            <typeparam name="TData"></typeparam>
+        </member>
+        <member name="P:albim.Result.ApiResult`1.Data">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:albim.Result.ApiResult`1.TotalCount">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:albim.Result.ApiResult`1.#ctor(System.Boolean,Common.ApiResultStatusCode,`0,System.Boolean,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="isSuccess"></param>
+            <param name="statusCode"></param>
+            <param name="data"></param>
+            <param name="message"></param>
+            <param name="isCached"></param>
+        </member>
+        <member name="M:albim.Result.ApiResult`1.op_Implicit(`0)~albim.Result.ApiResult{`0}">
+            <summary>
+            
+            </summary>
+            <param name="data"></param>
+            <returns></returns>
+        </member>
+        <member name="M:albim.Result.ApiResult`1.op_Implicit(Microsoft.AspNetCore.Mvc.OkResult)~albim.Result.ApiResult{`0}">
+            <summary>
+            
+            </summary>
+            <param name="result"></param>
+            <returns></returns>
+        </member>
+        <member name="M:albim.Result.ApiResult`1.op_Implicit(Microsoft.AspNetCore.Mvc.OkObjectResult)~albim.Result.ApiResult{`0}">
+            <summary>
+            
+            </summary>
+            <param name="result"></param>
+            <returns></returns>
+        </member>
+        <member name="M:albim.Result.ApiResult`1.op_Implicit(Microsoft.AspNetCore.Mvc.BadRequestResult)~albim.Result.ApiResult{`0}">
+            <summary>
+            
+            </summary>
+            <param name="result"></param>
+            <returns></returns>
+        </member>
+        <member name="M:albim.Result.ApiResult`1.op_Implicit(Microsoft.AspNetCore.Mvc.BadRequestObjectResult)~albim.Result.ApiResult{`0}">
+            <summary>
+            
+            </summary>
+            <param name="result"></param>
+            <returns></returns>
+        </member>
+        <member name="M:albim.Result.ApiResult`1.op_Implicit(Microsoft.AspNetCore.Mvc.ContentResult)~albim.Result.ApiResult{`0}">
+            <summary>
+            
+            </summary>
+            <param name="result"></param>
+            <returns></returns>
+        </member>
+        <member name="M:albim.Result.ApiResult`1.op_Implicit(Microsoft.AspNetCore.Mvc.NotFoundResult)~albim.Result.ApiResult{`0}">
+            <summary>
+            
+            </summary>
+            <param name="result"></param>
+            <returns></returns>
+        </member>
+        <member name="M:albim.Result.ApiResult`1.op_Implicit(Microsoft.AspNetCore.Mvc.NotFoundObjectResult)~albim.Result.ApiResult{`0}">
+            <summary>
+            
+            </summary>
+            <param name="result"></param>
+            <returns></returns>
+        </member>
+        <member name="T:albim.Startup">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:albim.Startup.#ctor(Microsoft.Extensions.Configuration.IConfiguration)">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:albim.Startup.Configuration">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:albim.Startup.ConfigureServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:albim.Startup.Configure(Microsoft.AspNetCore.Builder.IApplicationBuilder,Microsoft.AspNetCore.Hosting.IWebHostEnvironment,Microsoft.Extensions.Configuration.IConfiguration)">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:albim.Versioning.RemoveVersionFromParameterv">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:albim.Versioning.RemoveVersionFromParameterv.Apply(Microsoft.OpenApi.Models.OpenApiOperation,Swashbuckle.AspNetCore.SwaggerGen.OperationFilterContext)">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:albim.Versioning.ReplaceVersionWithExactValueInPath">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:albim.Versioning.ReplaceVersionWithExactValueInPath.Apply(Microsoft.OpenApi.Models.OpenApiDocument,Swashbuckle.AspNetCore.SwaggerGen.DocumentFilterContext)">
+            <summary>
+            
+            </summary>
+        </member>
+    </members>
+</doc>
